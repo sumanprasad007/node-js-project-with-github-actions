@@ -24,11 +24,11 @@ jobs:
       - name: Build project
         run: |
           npm run build
-      - name: Deploy to Server
-        env:
-          SERVER_USER: ${{ secrets.SERVER_USER }}
-          SERVER_IP: ${{ secrets.SERVER_IP }}
-          SERVER_PATH: ${{ secrets.SERVER_PATH }}
-        run: |
-          scp -r ./build/* $SERVER_USER@$SERVER_IP:$SERVER_PATH   
+      # - name: Deploy to Server
+      #   env:
+      #     SERVER_USER: ${{ secrets.SERVER_USER }}
+      #     SERVER_IP: ${{ secrets.SERVER_IP }}
+      #     SERVER_PATH: ${{ secrets.SERVER_PATH }}
+      #   run: |
+      #     scp -r ./build/* $SERVER_USER@$SERVER_IP:$SERVER_PATH   
 
